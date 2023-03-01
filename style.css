@@ -1,0 +1,102 @@
+/* Default styles */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: orangered;
+	color: #fff;
+	padding: 20px;
+	position: relative;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+nav li a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+}
+
+main section {
+	padding: 20px;
+	border-bottom: 1px solid #f00e0e;
+}
+
+footer {
+	background-color: #a04f1c;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+	/* Adjust font size */
+	body {
+		font-size: 14px;
+	}
+
+	/* Hide navigation */
+	nav {
+		display: none;
+	}
+
+	/* Show toggle button */
+	.toggle-nav {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: #333;
+		color: #fff;
+		border: none;
+		font-size: 24px;
+	}
+
+	/* Display sections in columns */
+	main section {
+		width: 50%;
+		float: left;
+	}
+
+	/* Clear floats */
+	main:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	/* Show navigation */
+	nav {
+		display: block;
+	}
+
+	/* Hide toggle button */
+	.toggle-nav {
+		display: none;
+	}
+
+	/* Display sections in rows */
+	main section {
+		width: 100%;
+		float: none;
+	}
+}
